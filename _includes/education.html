@@ -1,0 +1,15 @@
+<div class="education">
+  <h2>EDUCATION</h2>
+  <ul>
+    {% for degree in site.data.education %}
+      <li>{{ degree.year }}, <b>{{ degree.degree }}</b> in {{ degree.major }}, {{ degree.school }} 
+	{% if degree.thesis %}
+          <br><i>Thesis:</i> <b>{{ degree.thesis }}.</b>
+        {% endif %}
+        {% if degree.comments %}
+          <span class="Body_Small">{{ degree.comments }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

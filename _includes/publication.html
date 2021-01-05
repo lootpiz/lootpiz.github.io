@@ -1,0 +1,14 @@
+<div class="publication">
+  <h2>PUBLICATIONS</h2>
+  <ol>
+    {% for article in site.data.publications %}
+      <li>
+        <span class="style_title">{{ article.title }}.</span><br>
+        {{ article.authors }} <br>
+        <span class="style_journal">{{ article.journal }}</span> <span class="style_issue">{{ article.year }}</span>
+        <a href="https://doi.org/{{ article.doi }}" target="_blank"><span class="Body_Small">DOI: {{ article.doi }}</span></a> <span class="style_issue">&#124;</span> <a href="{{ site.baseurl }}/assets/pdfs/PMID_{{ article.pmid }}.pdf" target="_blank"><span class="Body_Small">PMID: {{ article.pmid }}</span></a>
+      </li>
+    {% endfor %}
+  </ol>
+<ul>
+</div>
