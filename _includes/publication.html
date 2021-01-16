@@ -6,7 +6,7 @@
         <span class="style_title">{{ article.title }}.</span><br>
         {{ article.authors }} <br>
         <span class="style_journal">{{ article.journal }}</span> <span class="style_issue">{{ article.year }}</span>
-        <a href="https://doi.org/{{ article.doi }}" target="_blank"><span class="Body_Small">DOI: {{ article.doi }}</span></a> <span class="style_issue">&#124;</span> <a href="{{ site.baseurl }}/assets/pdfs/PMID_{{ article.pmid }}.pdf" target="_blank"><span class="Body_Small">PMID: {{ article.pmid }}</span></a>
+        {% if article.doi %}<a href="https://doi.org/{{ article.doi }}" target="_blank"><span class="Body_Small">DOI: {{ article.doi }}</span></a> <span class="style_issue">&#124;</span>{% else %}<span class="Body_Small">in press</span>{% endif %} {% if article.pmid %}<a href="{{ site.baseurl }}/assets/pdfs/PMID_{{ article.pmid }}.pdf" target="_blank"><span class="Body_Small">PMID: {{ article.pmid }}</span></a>{% endif %}
       </li>
     {% endfor %}
   </ol>
