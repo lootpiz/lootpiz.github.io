@@ -1,5 +1,7 @@
-# About Heewon
-https://www.lootpiz.com/
+# lootpiz.github.io
+> About Heewon
+
+Visit: https://www.lootpiz.com/
 
 ## To run Jekyll
 <code>gem install bundler
