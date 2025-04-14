@@ -1,14 +1,38 @@
 <div class="publication">
-  <h2>PUBLICATIONS</h2>
-  <ol>
-    {% for article in site.data.publications %}
-      <li>
-        <span class="style_title">{{ article.title }}.</span><br>
-        {{ article.authors }} <br>
-        <span class="style_journal">{{ article.journal }}</span> <span class="style_issue">{{ article.year }}</span>
-        {% if article.doi %}<a href="https://doi.org/{{ article.doi }}" target="_blank"><span class="Body_Small">DOI: {{ article.doi }}</span></a> <span class="style_issue">&#124;</span>{% else %}<span class="Body_Small">in press</span>{% endif %} {% if article.pmid %}<a href="{{ site.baseurl }}/assets/pdfs/PMID_{{ article.pmid }}.pdf" target="_blank"><span class="Body_Small">PMID: {{ article.pmid }}</span></a>{% endif %}
-      </li>
-    {% endfor %}
-  </ol>
-<ul>
+        <h2>PUBLICATIONS</h2>
+        <font size="2"><sup>&#8224;</sup> : (co-) First author, <sup>*</sup>: (co-) Corresponding author</font><br /><br />
+        <ol>
+                {% for article in site.data.publications %}
+                <li>
+                        <span class="style_title">{{ article.title }}.</span><br>
+                        {{ article.authors }} <br>
+                        {% if article.journal %}
+                                <span class="style_journal">{{ article.journal }}</span> <span class="style_issue">{{ article.year }}</span>
+
+                                {% if article.doi %}
+                                        <a href="https://doi.org/{{ article.doi }}" target="_blank">
+                                                <span class="Body_Small">DOI: {{ article.doi }}</span>
+                                        </a>
+                                        <span class="style_issue">&#124;</span>
+
+                                        {% if article.pmid %}
+                                                <a href="{{ site.baseurl }}/assets/pdfs/{{ article.pmid }}.pdf" target="_blank">
+                                                        <span class="Body_Small">PMID: {{ article.pmid }}</span>
+                                                </a>
+                                        {% elsif article.pdf %}
+                                                <a href="{{ site.baseurl }}/assets/pdfs/{{ article.pdf }}.pdf" target="_blank">
+                                                        <span class="Body_Small">View PDF</span>
+                                                </a>
+                                        {% endif %}
+
+                                {% else %}
+                                        <span class="Body_Small"><i>in press</i></span>
+                                {% endif %}
+                                
+                        {% else %}
+                                <span class="style_journal">under review</span>
+                        {% endif %}
+                </li>
+                {% endfor %}
+        </ol>
 </div>
