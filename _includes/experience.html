@@ -1,8 +1,9 @@
 <div class="experience">
-  <h2>EXPERIENCE</h2>
-  <ul>
-    {% for experience in site.data.experience %}
-      <li>{{ experience.start }}&#8211;{{ experience.end }}, <b>{{ experience.position }}</b>, {{ experience.institute }}, {{ experience.location }}</li>
-    {% endfor %}
-  </ul>
+        <h2>EXPERIENCE</h2>
+        <ul>
+                {% for experience in site.data.experience %}
+                <li><b>{{ experience.position }}</b> ({{ experience.start }}&#8211;{% if experience.end == "present" %}<i>{{ experience.end }}</i>){% else %}{{ experience.end }}){% endif %}<br />
+                {{ experience.institute }}, {{ experience.location }}</li>
+                {% endfor %}
+        </ul>
 </div>

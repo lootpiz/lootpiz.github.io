@@ -1,15 +1,19 @@
 <div class="education">
-  <h2>EDUCATION</h2>
-  <ul>
-    {% for degree in site.data.education %}
-      <li>{{ degree.year }}, <b>{{ degree.degree }}</b> in {{ degree.major }}, {{ degree.school }} 
-	{% if degree.thesis %}
-          <br><i>Thesis:</i> <b>{{ degree.thesis }}.</b>
-        {% endif %}
-        {% if degree.comments %}
-          <span class="Body_Small">{{ degree.comments }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+        <h2>EDUCATION</h2>
+        <ul>
+                {% for degree in site.data.education %}
+                <li><b>{{ degree.degree }}</b> in <b>{{ degree.major }}</b> ({{ degree.year }})<br />
+                        {{ degree.school }}<br />
+                        {% if degree.thesis %}
+                        <i>Thesis:</i> <b>{{ degree.thesis }}.</b>
+                        {% endif %}
+                        {% if degree.dissertation %}
+                        <i>Dissertation:</i> <b>{{ degree.dissertation }}.</b>
+                        {% endif %}
+                        {% if degree.comments %}
+                        <b>{{ degree.comments }}</b>
+                        {% endif %}
+                </li>
+                {% endfor %}
+        </ul>
 </div>
