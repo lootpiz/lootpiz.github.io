@@ -3,7 +3,7 @@
         <ul>
                 {% for experience in site.data.experience %}
                 <li><b>{{ experience.position }}</b> ({{ experience.start }}&#8211;{% if experience.end == "present" %}<i>{{ experience.end }}</i>){% else %}{{ experience.end }}){% endif %}<br />
-                {{ experience.institute }}, {{ experience.location }}</li>
+                <span class="style_grey">{{ experience.institute }}, {{ experience.location }}</span></li>
                 {% endfor %}
         </ul>
 </div>

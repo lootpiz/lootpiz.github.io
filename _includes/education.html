@@ -3,15 +3,15 @@
         <ul>
                 {% for degree in site.data.education %}
                 <li><b>{{ degree.degree }}</b> in <b>{{ degree.major }}</b> ({{ degree.year }})<br />
-                        {{ degree.school }}<br />
+                        <span class="style_grey">{{ degree.school }}</span><br />
                         {% if degree.thesis %}
-                        <i>Thesis:</i> <b>{{ degree.thesis }}.</b>
+                        <i>Thesis:</i> {{ degree.thesis }}.
                         {% endif %}
                         {% if degree.dissertation %}
-                        <i>Dissertation:</i> <b>{{ degree.dissertation }}.</b>
+                        <i>Dissertation:</i> {{ degree.dissertation }}.
                         {% endif %}
                         {% if degree.comments %}
-                        <b>{{ degree.comments }}</b>
+                        {{ degree.comments }}
                         {% endif %}
                 </li>
                 {% endfor %}

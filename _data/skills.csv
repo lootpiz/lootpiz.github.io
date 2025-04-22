@@ -1,6 +1,6 @@
-skill
-"High-level languages: C/C++"
-"Scripting languages: R, Python, javascript, PHP, and HTML"
-"Structured query languages (SQL): MySQL, MariaDB, and NoSQL (MongoDB)"
-"Operating system: Good working knowledge of Linux and MacOS"
-"Adobe products: Illustrator, Photoshop, and Premiere Pro"
+category,items
+"High-level languages","C/C++"
+"Scripting languages","R, Python, javascript, PHP, and HTML"
+"Structured query languages (SQL)","MySQL, MariaDB, and NoSQL (MongoDB)"
+"Operating system","Good working knowledge of Linux and MacOS"
+"Adobe products","Illustrator, Photoshop, and Premiere Pro"

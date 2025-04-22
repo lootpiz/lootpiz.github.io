@@ -1,10 +1,8 @@
 <div class="skills">
-  <h2>SKILLS</h2>
-  <ul>
-    {% for skill in site.data.skills %}
-
-      <li>{{ skill.skill }}</li>
-
-    {% endfor %}
-  </ul>
+        <h2>SKILLS</h2>
+        <ul>
+                {% for skill in site.data.skills %}
+                <li>{{ skill.category }} : <b>{{ skill.items }}</b></li>
+                {% endfor %}
+        </ul>
 </div>
